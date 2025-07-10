@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GamerFix - Home</title>
     <link rel="stylesheet" href="./src/style.css" />
+    <!-- favicon -->
+    <link rel="icon" href="./src/assets/gamepad-solid.png" type="image/x-icon" />
   </head>
 
   <body id="top" class="bg-gray-100 min-h-screen flex flex-col">
@@ -30,8 +32,8 @@
         </div>
         <div class="flex flex-row space-x-8 text-lg font-semibold">
           <a href="#top" class="text-white hover:underline">Inicio</a>
-          <span class="text-white">Servicios</span>
-          <a href="./src/views/carrito.html" class="text-white hover:underline">Carrito</a>
+          <a href="#servicios" class="text-white hover:underline">Servicios</a>
+          <a href="./src/views/misreparaciones.html" class="text-white hover:underline">Mis reparaciones</a>
           <a href="./src/views/login.html" class="text-white hover:underline">Iniciar Sesión</a>
           <a href="#footer" class="text-white hover:underline">Contacto</a>
         </div>
@@ -83,7 +85,7 @@
         class="w-full py-10 bg-gray-100 flex flex-col items-center justify-center"
       >
         <h1
-          class="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-6"
+          class="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-6 " id="servicios"
         >
           Nuestros Servicios de Reparación
         </h1>
@@ -165,6 +167,108 @@
           </div>
         </div>
       </div>
+
+      <!-- Productos -->
+      <div
+        id="productos"
+        class="w-full py-10 bg-gray-100 flex flex-col items-center justify-center"
+      >
+        <h1
+          class="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-6"
+        >
+          Catálogo de Productos
+        </h1>
+        <div
+          class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center px-4"
+        >
+          <!-- Card: Cases -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Cases" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Cases</h2>
+            <p class="text-gray-700 text-center">Chasis modernos y resistentes para proteger y lucir tu PC gamer.</p>
+          </div>
+          <!-- Card: Procesadores -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Procesadores" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Procesadores</h2>
+            <p class="text-gray-700 text-center">Rendimiento y velocidad con lo último de Intel y AMD.</p>
+          </div>
+          <!-- Card: Tarjetas RAM -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="RAM" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Memoria RAM</h2>
+            <p class="text-gray-700 text-center">Expande la memoria de tu PC para un mejor rendimiento multitarea.</p>
+          </div>
+          <!-- Card: RAM para Laptops -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="RAM Laptop" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">RAM para Laptops</h2>
+            <p class="text-gray-700 text-center">Mejora la velocidad y capacidad de tu laptop con módulos SODIMM.</p>
+          </div>
+          <!-- Card: SSD -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="SSD" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Almacenamiento SSD</h2>
+            <p class="text-gray-700 text-center">Arranques y cargas ultrarrápidas para tu sistema y juegos.</p>
+          </div>
+          <!-- Card: NVMe 2.0 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="NVMe 2.0" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">NVMe 2.0</h2>
+            <p class="text-gray-700 text-center">La máxima velocidad de transferencia para los usuarios más exigentes.</p>
+          </div>
+          <!-- Card: Teclados Mecánicos -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Teclados Mecánicos" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Teclados Mecánicos</h2>
+            <p class="text-gray-700 text-center">Precisión, durabilidad y retroiluminación para gamers y escritores.</p>
+          </div>
+          <!-- Card: Mouses Gamer -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Mouses Gamer" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Mouses Gamer</h2>
+            <p class="text-gray-700 text-center">Sensores de alta precisión y ergonomía para largas sesiones de juego.</p>
+          </div>
+          <!-- Card: Fuentes de Poder -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Fuentes de Poder" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Fuentes de Poder</h2>
+            <p class="text-gray-700 text-center">Energía estable y segura para todos tus componentes.</p>
+          </div>
+          <!-- Card: Tarjetas de Video -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Tarjetas de Video" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Tarjetas de Video</h2>
+            <p class="text-gray-700 text-center">Gráficos de alto rendimiento para gaming y diseño profesional.</p>
+          </div>
+          <!-- Card: Monitores -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Monitores" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Monitores</h2>
+            <p class="text-gray-700 text-center">Pantallas de alta resolución y tasa de refresco para una experiencia visual superior.</p>
+          </div>
+          <!-- Card: Audífonos Gamer -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Audífonos Gamer" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Audífonos Gamer</h2>
+            <p class="text-gray-700 text-center">Sonido envolvente y micrófono de alta calidad para tus partidas.</p>
+          </div>
+          <!-- Card: Sillas Gamer -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="./src/assets/productos/image.png" alt="Sillas Gamer" class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 object-cover" />
+            <h2 class="text-xl font-bold text-blue-800 mb-2">Sillas Gamer</h2>
+            <p class="text-gray-700 text-center">Comodidad y soporte ergonómico para largas sesiones frente al PC.</p>
+          </div>
+          <!-- Card: Otros Accesorios -->
+          <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-24 h-24 mb-4 rounded-full border-4 border-blue-900 bg-blue-100 flex items-center justify-center">
+              <span class="text-blue-900 text-xl font-bold">Otros</span>
+            </div>
+            <h2 class="text-xl font-bold text-blue-800 mb-2 mt-0">Otros Accesorios</h2>
+            <p class="text-gray-700 text-center">Pads, webcams, micrófonos, hubs USB y mucho más para tu setup.</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -194,6 +298,12 @@
             Tlf:
             <span class="underline hover:text-blue-300">+58 04129663985</span>
           </p>
+          <button class="cursor-pointer">
+            <img src="./src/assets/inicio/whatsapp.png" alt="WhatsApp" class="w-8 h-8 inline-block ml-2" />
+          </button>
+          <button class="cursor-pointer">
+            <img src="./src/assets/inicio/instagram.png" alt="Instagram" class="w-8 h-8 inline-block ml-2" />
+          </button>
         </div>
       </div>
     </footer>
