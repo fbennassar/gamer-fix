@@ -33,8 +33,8 @@
         <div class="flex flex-row space-x-8 text-lg font-semibold">
           <a href="#top" class="text-white hover:underline">Inicio</a>
           <a href="#servicios" class="text-white hover:underline">Servicios</a>
-          <a href="./src/views/misreparaciones.html" class="text-white hover:underline">Mis reparaciones</a>
-          <a href="./src/views/login.html" class="text-white hover:underline">Iniciar Sesión</a>
+          <a href="./src/views/misreparaciones.html" class="text-white hover:underline" id="link-misreparaciones" style="display:none;">Mis reparaciones</a>
+          <a href="./src/views/login.html" class="text-white hover:underline" id="link-login">Iniciar Sesión</a>
           <a href="./src/views/contacto.html" class="text-white hover:underline">Contacto</a>
         </div>
       </div>
@@ -76,6 +76,10 @@
               Ver servicios
             </button>
           </a>
+          <button id="btn-contacto-principal" type="button" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg cursor-pointer mt-6 flex items-center gap-2 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6.06L0 24l6.18-1.62A12.09 12.09 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.09-1.39l-.36-.21-3.67.96.98-3.58-.23-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.47-.61-.48-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.3 0 1.35.99 2.65 1.13 2.83.14.18 1.95 2.98 4.73 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z"/></svg>
+            Contacto directo
+          </button>
         </div>
       </div>
 
@@ -310,10 +314,10 @@
             Tlf:
             <span class="underline hover:text-blue-300">+58 04129663985</span>
           </p>
-          <button class="cursor-pointer">
+          <button class="cursor-pointer" id="footer-whatsapp">
             <img src="./src/assets/inicio/whatsapp.png" alt="WhatsApp" class="w-8 h-8 inline-block ml-2" />
           </button>
-          <button class="cursor-pointer">
+          <button class="cursor-pointer" id="footer-instagram">
             <img src="./src/assets/inicio/instagram.png" alt="Instagram" class="w-8 h-8 inline-block ml-2" />
           </button>
         </div>
