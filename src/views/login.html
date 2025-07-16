@@ -36,14 +36,14 @@
       <div
         class="container mx-auto px-4 flex justify-center items-center pt-10"
       >
-        <div class="bg-white p-8 md:p-10 rounden-lg shadow-2xl w-full max-w-md">
+        <div class="bg-white p-8 md:p-10 rounded-lg shadow-2xl w-full max-w-md">
           <h1 class="text-3xl font-bold text-blue-800 text-center mb-8">
-            Iniciar Sesion
+            Iniciar Sesión
           </h1>
-          <form action="../../index.html" method="get">
+          <form id="login-form" method="get">
             <div class="mb-6">
               <label for="email" class="block text-gray-700 mb-2 text-lg"
-                >Correo Electronico</label
+                >Correo Electrónico</label
               >
               <input
                 type="email"
@@ -69,7 +69,7 @@
 
             <button
               type="submit"
-              class="w-full bg-blue-800 text-white text-lg font-bold p-3 rounded-lg hover:bg-blue-700 transition duration-300"
+              class="cursor-pointer w-full bg-blue-800 text-white text-lg font-bold p-3 rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Acceder
             </button>
@@ -79,12 +79,13 @@
               <a
                 href="./registro.html"
                 class="text-blue-800 hover:text-blue-600 transition duration-300 font-semibold m-0"
-                >Registrate</a
+                >Regístrate</a
               >
             </div>
           </form>
         </div>
       </div>
     </main>
+    <script src="../scripts/login.js" type="module"></script>
   </body>
 </html>
