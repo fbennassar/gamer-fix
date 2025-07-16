@@ -11,8 +11,9 @@ export const login = async (email, password) => {
   if (data.user) {
     localStorage.setItem('token', data.session.access_token);
 
-    // ¡Aquí está el cambio! Pasamos data.user directamente a isAdmin.
+    
     if (await isAdmin(data.user)) {
+      localStorage.setItem('isAdmin', 'true'); // Guarda el estado de admin en localStorage
       window.location.href = '../views/adminDashboard.html';
     } else {
       window.location.href = '../../index.html';
@@ -25,5 +26,5 @@ export const login = async (email, password) => {
 export const logout = async () => {
   await supabase.auth.signOut();
   localStorage.removeItem('token'); // Limpia el token del localStorage
-  window.location.href = '/src/views/login.html'; // Redirige al login
+  window.location.href = '../../index.html'; // Redirige al login
 };
