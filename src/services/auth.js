@@ -1,10 +1,10 @@
 import { supabase } from '../db/supabaseClient.js';
 import { isAdmin } from '../db/usuarios.js';
-
+import swal from 'sweetalert';
 export const login = async (email, password) => {
   const { data, error } = await supabase.auth.signInWithPassword({ email, password });
   if (error) {
-    alert(error.message);
+    swal(error.message);
     return null;
   }
 
@@ -14,9 +14,16 @@ export const login = async (email, password) => {
     
     if (await isAdmin(data.user)) {
       localStorage.setItem('isAdmin', 'true'); // Guarda el estado de admin en localStorage
-      window.location.href = '../views/adminDashboard.html';
+      localStorage.setItem('isAdmin', 'true');
+      swal("Acesso a modo administrador!", "Inicio de sesión exitoso", "success")
+        .then((value) => {
+          window.location.href = '../views/adminDashboard.html';
+        });
     } else {
-      window.location.href = '../../index.html';
+      swal("Bienvenido!", "Inicio de sesión exitoso", "success")
+        .then((value) => {
+          window.location.href = '../../index.html';
+        });
     }
   }
 
@@ -27,9 +34,14 @@ export const logout = async () => {
   await supabase.auth.signOut();
   localStorage.removeItem('token'); // Limpia el token del localStorage
   if (localStorage.getItem('isAdmin')) {
-    localStorage.removeItem('isAdmin'); // Limpia el estado de admin si existe
+    swal("Sesión finalizada", "Has cerrado sesión exitosamente", "success")
+      .then((value) => {
+        localStorage.removeItem('isAdmin'); // Limpia el estado de admin si existe
+        window.location.href = '../../index.html'; // Redirige al login
+      });
+  } else {
+    window.location.href = '../../index.html'; // Redirige al login
   }
-  window.location.href = '../../index.html'; // Redirige al login
 };
 
 export const register = async (email, password, nombre, cedula, direccion, telefono) => {
@@ -48,14 +60,9 @@ export const register = async (email, password, nombre, cedula, direccion, telef
   }
 );
   if (error) {
-    alert(error.message);
+    swal(error.message);
     return null;
   }
 
-  if (data.user) {
-    localStorage.setItem('token', data.session.access_token);
-    window.location.href = '../../index.html'; // Redirige al login después del registro
-  }
-
-  return data.user;
+  return { data, error };
 }
