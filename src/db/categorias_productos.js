@@ -45,7 +45,8 @@ export const updateCategoria = async (id, nombre, descripcion) => {
   const { data, error } = await supabase
     .from("categorias_productos")
     .update({ nombre, descripcion })
-    .eq("id_categorias_productos", id);
+    .eq("id_categorias_productos", id)
+    .select();
 
   if (error) {
     console.error("Error al actualizar la categoría:", error);
