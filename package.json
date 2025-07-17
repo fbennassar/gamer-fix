@@ -15,6 +15,7 @@
     "@supabase/supabase-js": "^2.50.5",
     "@tailwindcss/vite": "^4.1.11",
     "dotenv": "^17.2.0",
+    "sweetalert": "^2.1.2",
     "tailwindcss": "^4.1.11"
   }
 }
