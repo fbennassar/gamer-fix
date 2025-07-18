@@ -25,3 +25,25 @@ async function handleLogout() {
 }
 
 document.getElementById('btn-logout').addEventListener('click', handleLogout); // Añade el evento al botón de cerrar sesión
+
+// Lógica para el modal de contacto
+const linkContacto = document.getElementById('link-contacto-header');
+const modalContacto = document.getElementById('modal-contacto');
+const cerrarModalContacto = document.getElementById('cerrar-modal-contacto');
+const btnContactoPrincipal = document.getElementById('btn-contacto-principal');
+
+if (linkContacto && modalContacto && cerrarModalContacto) {
+  linkContacto.addEventListener('click', function(e) {
+    e.preventDefault();
+    modalContacto.classList.remove('hidden');
+  });
+  cerrarModalContacto.addEventListener('click', function() {
+    modalContacto.classList.add('hidden');
+  });
+  // Cerrar modal al hacer clic fuera del contenido
+  modalContacto.addEventListener('click', function(e) {
+    if (e.target === modalContacto) {
+      modalContacto.classList.add('hidden');
+    }
+  });
+}
