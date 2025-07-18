@@ -148,5 +148,28 @@
         </div>
       </div>
     </footer>
+    <button id="toggle-dark" aria-label="Alternar modo oscuro">🌙</button>
+    <script>
+      // Script para alternar modo oscuro
+      const btnDark = document.getElementById('toggle-dark');
+      function setDarkMode(on) {
+        if (on) {
+          document.body.classList.add('dark');
+          btnDark.textContent = '☀️';
+        } else {
+          document.body.classList.remove('dark');
+          btnDark.textContent = '🌙';
+        }
+      }
+      btnDark.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark');
+        setDarkMode(isDark);
+        localStorage.setItem('modoOscuro', isDark ? '1' : '0');
+      });
+      // Mantener preferencia
+      if (localStorage.getItem('modoOscuro') === '1') {
+        setDarkMode(true);
+      }
+    </script>
   </body>
 </html>

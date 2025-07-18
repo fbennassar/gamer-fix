@@ -12,6 +12,7 @@ export default defineConfig({
         registro: resolve(__dirname, 'src/views/registro.html'),
         adminDashboard: resolve(__dirname, 'src/views/adminDashboard.html'),
         misreparaciones: resolve(__dirname, 'src/views/misreparaciones.html'),
+        seguimiento: resolve(__dirname, 'src/views/seguimiento.html'),
       },
     },
   },

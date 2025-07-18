@@ -1,1 +1,164 @@
 @import "tailwindcss";
+/* --- Modo oscuro global --- */
+body.dark {
+  background-color: #18181b;
+  color: #f3f4f6;
+}
+body.dark header,
+body.dark footer {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+body.dark .bg-white {
+  background-color: #23272f !important;
+  color: #f3f4f6 !important;
+}
+body.dark .text-black {
+  color: #f3f4f6 !important;
+}
+body.dark .text-blue-800 {
+  color: #60a5fa !important;
+}
+body.dark .text-blue-900 {
+  color: #3b82f6 !important;
+}
+body.dark .border-gray-300 {
+  border-color: #374151 !important;
+}
+body.dark input,
+body.dark textarea {
+  background-color: #18181b !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+body.dark .bg-blue-800 {
+  background-color: #1e293b !important;
+}
+body.dark .bg-blue-400 {
+  background-color: #2563eb !important;
+}
+body.dark .bg-gray-100 {
+  background-color: #18181b !important;
+}
+body.dark .bg-white {
+  background-color: #23272f !important;
+}
+body.dark .shadow-lg,
+body.dark .shadow-2xl,
+body.dark .shadow-inner {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.7) !important;
+}
+body.dark a {
+  color: #60a5fa;
+}
+body.dark a:hover {
+  color: #93c5fd;
+}
+body.dark p,
+body.dark .text-gray-600,
+body.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+/* --- Botón flotante modo oscuro --- */
+#toggle-dark {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1000;
+  background: #23272f;
+  color: #f3f4f6;
+  border: none;
+  border-radius: 50px;
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#toggle-dark:hover {
+  background: #374151;
+  color: #fff;
+}
+
+/* Modal contacto personalizado */
+#modal-contacto {
+  background: rgba(0, 0, 0, 0.7); /* overlay azul mucho más oscuro para máximo contraste */
+}
+.modal-contacto-box {
+  border: 3px solid #2563eb;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba(30,64,175,0.10);
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  border-radius: 2rem;
+  max-width: 420px;
+  width: 100%;
+}
+.modal-contacto-logo {
+  background: none;
+  box-shadow: none;
+  margin-bottom: 0.7rem;
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-contacto-logo img {
+  width: 80px;
+  height: 80px;
+  opacity: 0.35;
+  color: #2563eb;
+}
+.modal-contacto-titulo {
+  color: #2563eb;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.1rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.modal-contacto-btn, .modal-contacto-info {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 0.7rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 2px 8px 0 rgba(30,64,175,0.07);
+}
+.modal-contacto-btn.whatsapp {
+  background: #22c55e;
+  color: #fff;
+}
+.modal-contacto-btn.mail {
+  background: #2563eb;
+  color: #fff;
+}
+.modal-contacto-btn.instagram {
+  background: #ec4899;
+  color: #fff;
+}
+.modal-contacto-info {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #e5e7eb;
+  font-weight: 500;
+}
+.modal-contacto-info.direccion {
+  margin-bottom: 0;
+}
+#cerrar-modal-contacto {
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  color: #555;
+  font-weight: bold;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
